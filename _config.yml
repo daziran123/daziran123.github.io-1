@@ -2,8 +2,8 @@
 title: 大力出奇迹
 SEOTitle: 大力的博客 | Da Li Blog
 header-img: img/home-bg.jpg
-email: 397188351@QQ.com
-description: "关于前端 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
+email: 397188351@qq.com
+description: "关于前端 | 大力，Web & Mobile Lover，Software Engineer，UX Designer | 这里是大力的个人博客，与你一起发现更大的世界。"
 keyword: "大力, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "https://daziran123.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -16,7 +16,7 @@ weibo_username:
 zhihu_username:     
 github_username:    
 twitter_username:   
-#facebook_username:  huxpro
+#facebook_username:  dali
 # linkedin_username:  firstname-lastname-idxxxx
 
 
