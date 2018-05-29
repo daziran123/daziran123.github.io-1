@@ -87,8 +87,8 @@ service-worker: true
 # Friends
 friends: [
     {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
+    #     title: "大力",
+    #     href: "daziran123.github.io"
     # },{
         title: "乱序",
         href: "http://mida.re/"
