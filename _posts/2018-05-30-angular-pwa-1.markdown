@@ -33,11 +33,11 @@ ng serve --open
 ng add @angular/pwa
 效果如下：<br>
 0_1525512049594_2.png
-因为@angular/cli内置的Server在--prod 编译的时候还不支持service-worker，所以上面装了一个第三方的lite-server，它的官方文档在这里：https://npmjs.com/package/lite-server ，请执行：
+因为@angular/cli内置的Server在--prod 编译的时候还不支持service-worker，所以上面装了一个第三方的lite-server，它的官方文档在这里：https://npmjs.com/package/lite-server ，请执行：<br>
 npm install lite-server --save-dev
 npm install lite-server --global
 装完之后，执行：<br>
-npx ng build --prod && lite-server --baseDir dist/test-ng-pwa
+npx ng build --prod && lite-server --baseDir dist/test-ng-pwa<br>
 然后打开你的浏览器访问3000端口，可以看到service-worker已经起成功了：<br>
 0_1525512597244_3.png
 0_1525512579997_6.png
