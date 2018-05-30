@@ -26,6 +26,7 @@ ng new test-ng-pwa
 创建成功之后把项目起来看一下，执行：
 ng serve --open
 浏览器里面看到这个界面说明一切OK：
+![](/img/in-post/post-nextgen-web-pwa/flipkart-2.jpeg)
 0_1525512173369_5.png
 第三步：添加PWA支持
 把项目停掉，然后在终端里面执行：
