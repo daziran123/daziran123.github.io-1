@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "下一代 Web 应用模型 —— Progressive Web App"
-subtitle:   "The Next Generation Application Model For The Web - Progressive Web App"
+title:      "利用@angular/cli V6.0来直接开发PWA应用了"
+subtitle:   "利用@angular/cli V6.0来直接开发PWA应用"
 date:       2018-05-24 12:00:00
 author:     "dali"
 header-img: "img/post-bg-nextgen-web-pwa.jpg"
@@ -9,7 +9,7 @@ header-mask: 0.3
 catalog:    true
 tags:
     - 前端开发
-    - JavaScript
+    - angular
     - PWA
 ---
 
