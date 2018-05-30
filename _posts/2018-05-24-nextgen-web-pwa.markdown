@@ -26,7 +26,7 @@ tags:
 但是，Web 应用在移动时代并没有达到其在桌面设备上流行的程度。究其原因，尽管上述的各种方案已经充分利用了现有的 JavaScript 计算能力、CSS 布局能力、HTTP 缓存与浏览器 API 对当代基于 [Ajax][3] 与[响应式设计][4]的 web 应用模型的性能与体验带来了工程角度的巨大突破，我们仍然无法在不借助原生程序辅助浏览器的前提下突破 web 平台本身对 web 应用固有的桎梏：**客户端软件（即网页）需要下载所带来的网络延迟；与 Web 应用依赖浏览器作为入口所带来的体验问题。**
 
 ![](/img/in-post/post-nextgen-web-pwa/PWAR-007.jpeg)
-*Web 与原生应用在移动平台上的使用时长对比 [图片来源: Google][i2]*
+
 
 在桌面设备上，由于网络条件稳定，屏幕尺寸充分，交互方式趋向于多任务，这两点造成的负面影响对比 web 应用免于安装、随叫随到、无需更新等优点，瑕不掩瑜。但是在移动时代，脆弱的网络连接与全新的人机交互方式使得这两个问题被无限放大，严重制约了 web 应用在移动平台的发展。在用户眼里，原生应用不会出现「白屏」，清一色都摆在主屏幕上；而 web 应用则是浏览器这个应用中的应用，使用起来并不方便，而且加载也比原生应用要慢。
 
@@ -35,13 +35,12 @@ Progressive Web Apps（以下简称 PWA）以及构成 PWA 的一系列关键技
 将这些技术组合在一起会是怎样的效果呢？「印度阿里巴巴」 —— [Flipkart][17] 在 2015 年一度关闭了自己的移动端网站，却在年底发布了现在最为人津津乐道的 PWA 案例 *FlipKart Lite*，成为世界上第一个支撑大规模业务的 PWA。发布的一周后它就亮相于 [Chrome Dev Summit 2015][15] 上，笔者当时就被惊艳到了。为了方便各媒介上的读者观看，笔者做了几幅图方便给大家介绍：
 
 ![](/img/in-post/post-nextgen-web-pwa/flipkart-1.jpeg)
-*图片来源: Hux & [Medium.com][i3]*
 
 当浏览器发现用户[需要][16] Flipkart Lite 时，它就会提示用户「嘿，你可以把它添加至主屏哦」（用户也可以手动添加）。这样，Flipkart Lite 就会像原生应用一样在主屏上留下一个自定义的 icon 作为入口；与一般的书签不同，当用户点击 icon 时，Flipkat Lite 将直接全屏打开，不再受困于浏览器的 UI 中，而且有自己的启动屏效果。
 
 
 ![](/img/in-post/post-nextgen-web-pwa/flipkart-2.jpeg)
-*图片来源: Hux & [Medium.com][i3]*
+
 
 更强大的是，在无法访问网络时，Flipkart Lite 可以像原生应用一样照常执行，还会很骚气的变成黑白色；不但如此，曾经访问过的商品都会被缓存下来得以在离线时继续访问。在商品降价、促销等时刻，Flipkart Lite 会像原生应用一样发起推送通知，吸引用户回到应用。
 
@@ -50,7 +49,7 @@ Progressive Web Apps（以下简称 PWA）以及构成 PWA 的一系列关键技
 更令笔者兴奋的是，就在今年 11 月的 [Chrome Dev Summit 2016][18] 上，Chrome 的工程 VP Darin Fisher 介绍了 Chrome 团队正在做的一些实验：把「添加至主屏」重命名为「安装」，被安装的 PWA 不再仅以 widget 的形式显示在桌面上，而是真正做到与所有原生应用平级，一样被收纳进应用抽屉（App Drawer）里，一样出现在系统设置中 🎉🎉🎉。
 
 ![](/img/in-post/post-nextgen-web-pwa/flipkart-3.jpeg)
-*图片来源: Hux & [@adityapunjani][i4]*
+
 
 图中从左到右分别为：类似原生应用的安装界面；被收纳在应用抽屉里的 Flipkart Lite 与 Hux Blog；设置界面中并列出现的 Flipkart 原生应用与 Flipkart Lite PWA （可以看到 PWA 巨大的体积优势）
 
@@ -65,7 +64,7 @@ Web App Manifest，即通过一个清单文件向浏览器暴露 web 应用的�
 让 web 应用在移动设备上的体验更接近原生应用的尝试其实早在 2008 年的 [iOS 1.1.3 与 iOS 2.1.0 ][q37]时就开始了，它们分别为 web 应用增加了对自定义 icon 和全屏打开的支持。
 
 ![](/img/in-post/post-nextgen-web-pwa/ios2-a2hs.gif)
-*图片来源: [appleinsider.com][i1]*
+
 
 但是很快，随着越来越多的私有平台通过 `<meta>`/`<link>` 标签来为 web 应用添加「私货」，`<head>` 很快就被塞满了：
 
