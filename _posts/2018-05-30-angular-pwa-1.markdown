@@ -52,10 +52,10 @@ npm install lite-server --global
 装完之后，执行：<br>
 npx ng build --prod && lite-server --baseDir dist/test-ng-pwa<br>
 然后打开你的浏览器访问3000端口，可以看到service-worker已经起成功了：<br>
-0_1525512597244_3.png
-0_1525512579997_6.png
+0_1525512597244_3.png<br>
+0_1525512579997_6.png<br>
 这时候你已经可以把应用添加到桌面上了：<br>
-0_1525512634683_4.png
+0_1525512634683_4.png<br>
 这是Windows上的效果：<br>
-0_1525512744332_7.png
+0_1525512744332_7.png<br>
 Linux、iOS、Android、ChromeOS最新的版本都已经全部支持，你自己去试试吧！
