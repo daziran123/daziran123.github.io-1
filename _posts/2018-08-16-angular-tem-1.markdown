@@ -1,3 +1,23 @@
+
+---
+layout:post
+title:"玩转模板"
+subtitle:"angular组件"
+date: 2018-08-16 12:00:00
+author:"dali"
+header-img: "img/post-bg-nextgen-web-pwa.jpg"
+header-mask: 0.3
+catalog: true
+tags:
+    - 前端开发
+    - JavaScript
+    - PWA
+    
+---
+
+
+
+
 ## 组件：模板
 
 
