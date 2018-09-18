@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      "Angular-玩转模板"
@@ -6,15 +5,11 @@ subtitle:   "angular组件"
 date:       2018-09-18 12:00:00
 author:     "dali"
 header-img: "img/post-bg-nextgen-web-pwa.jpg"
-header-mask: 0.3
+header-mask: 0.5
 catalog:    true
 tags:
-    - 前端开发
-    - JavaScript
     - Angular
 ---
-
-
 
 
 
