@@ -214,6 +214,7 @@ setCurrentStyles() {
 ngStyle 这种方式相当于在代码里面写 CSS 样式，比较丑陋，违反了注意点分离的原则，而且将来不太好修改，非常不建议这样写。
 
 ```
+
 <p class="text-danger">ngModel只能用在表单类的元素上面</p>
     <input [(ngModel)]="currentRace.name">
 <p>{{currentRace.name}}</p>
@@ -223,6 +224,7 @@ public currentRace:any{
 }
 
 ```
+
 请注意，如果你需要使用 NgModel 来进行双向数据绑定，必须要在对应的模块里面 import FormsModule
 - 管道
 
