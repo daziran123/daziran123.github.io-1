@@ -16,12 +16,12 @@ tags:
 
 - 指令和组件之间的关系
 - 有了指令为什么还要组件
-- 
-![image](https://github.com/daziran123/images/blob/master/com-dir.png)
+
+![image](/img/com-dir.png)
 
 
 再看一下核心源代码里面的内容  
-![directive](https://www.github.com/daziran123/images/directives.png)
+![directive](/img/directives.png)
 
 #### 很明显，Component是Directive的子接口。
 
