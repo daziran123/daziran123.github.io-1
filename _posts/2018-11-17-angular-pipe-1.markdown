@@ -53,6 +53,7 @@ I18nSelectPipe
   <p>{{ 'Angular' | lowercase }}</p> <!-- Output: angular -->
 </div>
 ```
+
 - 数值格式化
 ```html
 <div>
@@ -60,6 +61,7 @@ I18nSelectPipe
   <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
 </div>
 ```
+
 
 - 日期格式化
 ```html
@@ -178,7 +180,7 @@ export class RepeatPipe implements PipeTransform {
 }
 
 ```
-RepeatPipe 使用
+- RepeatPipe 使用
 ```html
 <div>
    <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
@@ -188,6 +190,5 @@ RepeatPipe 使用
 #### 管道分类
 -  pure 管道：仅当管道输入值变化的时候，才执行转换操作，默认的类型是 pure 类型。（备注：输入值变化是指原始数据类型如：string、number、boolean 等的数值或对象的引用值发生变化）。  
 - impure 管道：在每次变化检测期间都会执行，如鼠标点击或移动都会执行 impure 管道。  
-
 ### 总结
 > 本文介绍了 Angular 中的常用内建管道的用法和管道的分类，同时也介绍了 pure 和 impure 管道的区别。 此外我们通过两个示例展示了如何自定义管道，最后详细分析了 RepeatPipe 管道的工作原理。
