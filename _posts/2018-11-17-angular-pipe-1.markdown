@@ -1,3 +1,21 @@
+---
+layout:     post
+title:      "Angular 中 Pipe及应用"
+subtitle:   "管道的介绍以及如何自定义自己的管道"
+date:       2018-11-17 12:00:00
+author:     "dali"
+header-img: "img/post-bg-nextgen-web-pwa.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - 前端开发
+    - Angular
+    - Pipe
+---
+
+
+
+
 ### Angular 中 Pipe
 > Angular 中 Pipe（管道） 与 Angular 1.x 中的 filter（过滤器）的作用的是一样的。它们都是用来对输  入的数据进行处理，如大小写转换、数值和日期格式  化等。
 
