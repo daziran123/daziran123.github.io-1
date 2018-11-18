@@ -71,8 +71,8 @@ I18nSelectPipe
 - JavaScript 对象序列化
 ```html
 <div>
-  <p ngNonBindable>{{ { name: 'semlinker' } | json }}</p>
-  <p>{{ { name: 'semlinker' } | json }}</p> <!-- Output: { "name": "semlinker" } -->
+  <p ngNonBindable>{{ { name: 'daziran' | json }}</p>
+  <p>{{ { name: 'daziran' | json }}</p> <!-- Output: { "name": "daziran" } -->
 </div>
 ```
 - 对象转换
@@ -86,16 +86,16 @@ I18nSelectPipe
 管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
 ```html
 <div>
-  <p ngNonBindable>{{ 'semlinker' | slice:0:3 }}</p>
-  <p>{{ 'semlinker' | slice:0:3 }}</p> <!-- Output: sem -->
+  <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
+  <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
 </div>
 ```
 - 管道链
 我们可以将多个管道连接在一起，组成管道链对数据进行处理。
 ```html
 <div>
-  <p ngNonBindable>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
-  <p>{{ 'semlinker' | slice:0:3 | uppercase }}</p> <!-- Output: SEM -->
+  <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
+  <p>{{ 'daziran' | slice:0:3 | uppercase }}</p> <!-- Output: SEM -->
 </div>
 ```
 - 完整示例
@@ -122,16 +122,16 @@ import { Component } from '@angular/core';
       <p>{{ today | date: 'shortTime' }}</p>
     </div>
     <div>
-      <p ngNonBindable>{{ { name: 'semlinker' } | json }}</p>
-      <p>{{ { name: 'semlinker' } | json }}</p>
+      <p ngNonBindable>{{ { name: 'daziran' } | json }}</p>
+      <p>{{ { name: 'daziran' } | json }}</p>
     </div>
     <div>
-      <p ngNonBindable>{{ 'semlinker' | slice:0:3 }}</p>  
+      <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>  
       <p>{{ 'semlinker' | slice:0:3 }}</p>
     </div>
     <div>
-      <p ngNonBindable>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
-      <p>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
+      <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
+      <p>{{ 'daziran' | slice:0:3 | uppercase }}</p>
     </div>
   `,
 })
