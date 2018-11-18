@@ -69,12 +69,7 @@ I18nSelectPipe
 </div>
 ```
 - JavaScript 对象序列化
-```html
-<div>
-  <p ngNonBindable>{{  name: 'daziran' | json }}</p>
-  <p>{{  name: 'daziran' | json }}</p> <!-- Output: { "name": "daziran" } -->
-</div>
-```
+
 - 对象转换
 ```html
  <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
