@@ -122,8 +122,8 @@ import { Component } from '@angular/core';
       <p>{{ today | date: 'shortTime' }}</p>
     </div>
     <div>
-      <p ngNonBindable>{{ { name: 'daziran' } | json }}</p>
-      <p>{{ { name: 'daziran' } | json }}</p>
+      <p ngNonBindable>{{ { name: 'daziran'  | json }}</p>
+      <p>{{ { name: 'daziran'  | json }}</p>
     </div>
     <div>
       <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>  
