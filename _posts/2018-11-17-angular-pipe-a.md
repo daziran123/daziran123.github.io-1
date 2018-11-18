@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Angular 中 Pipe及应用"
-subtitle:   "管道的介绍以及如何自定义自己的管道"
+subtitle:   "Pipe"
 date:       2018-11-17 12:00:00
 author:     "dali"
 header-img: "img/post-bg-nextgen-web-pwa.jpg"
