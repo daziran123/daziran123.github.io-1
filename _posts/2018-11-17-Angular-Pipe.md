@@ -17,176 +17,40 @@ tags:
 > Angular 中 Pipe（管道） 与 Angular 1.x 中的 filter（过滤器）的作用的是一样的。它们都是用来对输  入的数据进行处理，如大小写转换、数值和日期格式  化等。
 
 
-#### 内建管道及分类
-String -> String  
-UpperCasePipe  
-LowerCasePipe  
-TitleCasePipe  
-Number -> String  
-DecimalPipe  
-PercentPipe  
-CurrencyPipe  
-Object -> String  
-JsonPipe  
-DatePipe  
-Tools  
-KeyValuePipe（v6.1.0）  
-SlicePipe  
-AsyncPipe  
-I18nPluralPipe  
-I18nSelectPipe 
-
-#### 内建管道使用示例 
-- 大写转换
-```html
-<div>
-  <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
-  <p>{{ 'Angular' | uppercase }}</p> <!-- Output: ANGULAR -->
-</div>
-```
-- 小写转换
-```html
-<div>
-  <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
-  <p>{{ 'Angular' | lowercase }}</p> <!-- Output: angular -->
-</div>
-```
-
-- 数值格式化
-```html
-<div>
-  <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
-  <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
-</div>
-```
+### Angular有了指令为什么还要组件
 
 
-- 日期格式化
-```html
-<div>
-  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
-  <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
-</div>
-```
-- JavaScript 对象序列化
+- 指令和组件之间的关系
+- 有了指令为什么还要组件
 
-- 对象转换
-```html
- <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
-<div *ngFor="let item of object | keyvalue">
-   {{item.key}}: {{item.value}} 
-</div>
-```
-- 管道参数
-管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
-```html
-<div>
-  <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
-  <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
-</div>
-```
-- 管道链
-我们可以将多个管道连接在一起，组成管道链对数据进行处理。
-```html
-<div>
-  <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-  <p>{{ 'daziran' | slice:0:3 | uppercase }}</p> <!-- Output: SEM -->
-</div>
-```
-- 完整示例
-```html
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  template: `
-    <div>
-      <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
-      <p>{{ 'Angular' | uppercase }}</p>  
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
-      <p>{{ 'Angular' | lowercase }}</p>  
-    </div>
-    <div>
-      <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p> 
-      <p>{{ 3.14159265 | number: '1.4-4' }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ today | date: 'shortTime' }}</p>
-      <p>{{ today | date: 'shortTime' }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ { name: 'daziran'  | json }}</p>
-      <p>{{ { name: 'daziran'  | json }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>  
-      <p>{{ 'semlinker' | slice:0:3 }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-      <p>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-    </div>
-  `,
-})
-export class AppComponent {
-  today = new Date();
-}
-```
-#### 自定义管道
-- 自定义管道的步骤：
-
-> 使用 @Pipe 装饰器定义 Pipe 的 metadata 信息，如 Pipe 的名称 - 即 name 属性
-实现 PipeTransform 接口中定义的 transform 方法
-- WelcomePipe 定义  
-```js
-import { Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({ name: 'welcome' })
-export class WelcomePipe implements PipeTransform {
-  transform(value: string): string {
-    if(!value) return value;
-    if(typeof value !== 'string') {
-      throw new Error('Invalid pipe argument for WelcomePipe');
-    }
-    return "Welcome to " + value;
-  }
-}
-```
-- WelcomePipe 使用
-```html
-<div>
-   <p ngNonBindable>{{ 'daziran' | welcome }}</p>
-   <p>{{ 'daziran' | welcome }}</p> <!-- Output: Welcome to daziran -->
-</div>
-```
-- 当 WelcomePipe 的输入参数，即 value 值为非字符串时，如使用 123，则控制台将会抛出以下异常：
+![image](/img/com-dir.png)
 
 
-> EXCEPTION: Error in ./AppComponent class AppComponent caused by: Invalid pipe argument for WelcomePipe
+再看一下核心源代码里面的内容  
+![directive](/img/directives.png)
 
-- RepeatPipe 定义
-```js
-import {Pipe, PipeTransform} from '@angular/core';
+#### 很明显，Component是Directive的子接口。
 
-@Pipe({name: 'repeat'})
-export class RepeatPipe implements PipeTransform {
-	transform(value: any, times: number) {
-	    return value.repeat(times);
-	}
-}
+> 根据Angular官方文档的描述，Angular里面有3种类型的指令：
 
-```
-- RepeatPipe 使用
-```html
-<div>
-   <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
-   <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
-</div>
-```
-#### 管道分类
--  pure 管道：仅当管道输入值变化的时候，才执行转换操作，默认的类型是 pure 类型。（备注：输入值变化是指原始数据类型如：string、number、boolean 等的数值或对象的引用值发生变化）。  
-- impure 管道：在每次变化检测期间都会执行，如鼠标点击或移动都会执行 impure 管道。  
-### 总结
-> 本文介绍了 Angular 中的常用内建管道的用法和管道的分类，同时也介绍了 pure 和 impure 管道的区别。 此外我们通过两个示例展示了如何自定义管道，最后详细分析了 RepeatPipe 管道的工作原理。
+- Component是Directive的子接口，是一种特殊的指令，Component可以带有HTML模板，Directive不能有模板
+- 属性型指令：用来修改DOM元素的外观和行为，但是不会改变DOM结构，Angular内置指令里面典型的属性型指令有ngClass、ngStyle。如果你打算封装自己的组件库，属性型指令是必备的内容。
+- 结构型指令：可以修改DOM结构，内置的常用结构型指令有*ngFor、*ngIf和NgSwitch。由于结构型指令会修改DOM结构，所以同一个HTML标签上面不能同时使用多个结构型指令，否则大家都来改DOM结构，到底听谁的呢？如果要在同一个HTML元素上面使用多个结构性指令，可以考虑加一层空的元素来嵌套，比如在外面套一层空的<ng-container></ng-container>，或者套一层空的<div>
+#### 有了组件为什么还要指令？
+
+
+- 根本原因是：我们需要用指令来增强标签的功能，包括HTML原生标签和你自己自定义的标签。
+
+举例来说：<div>是一个常用的原生HTML标签，但是请不要小看它，它上面实际上有非常多的属性，这些属性都是W3C规范规定好的：
+[w3c div 32个属性列表](https://www.w3schools.com/tags/ref_standardattributes.asp/)
+
+
+- 但是，这些内置属性还不够用，你想给原生的HTML标签再扩展一些属性。比方说：你想给```<div>```标签增加一个自定义的属性叫做```my-high-light```，当鼠标进入```div```内部时，```div```的背景就会高亮显示，可以这样使用```<div my-high-light>``` 
+
+- 这时候，没有指令机制就无法实现了。
+
+#### 总结
+- 总结：“指令”是一个非常精妙的设计，利用它可以无入侵地扩展原生HTML的Attribute(属性)。
+---
+- 以我自己的观点来看，“指令”在Angular里面的重要性不亚于你们当年热捧的“双向数据绑定”。
+
