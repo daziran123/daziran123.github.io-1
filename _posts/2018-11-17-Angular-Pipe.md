@@ -77,6 +77,7 @@ I18nSelectPipe
 <div *ngFor="let item of object | keyvalue">
    {{item.key}}: {{item.value}} 
 </div>
+
 ```
 - 管道参数
 管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
@@ -141,7 +142,7 @@ export class AppComponent {
 > 使用 @Pipe 装饰器定义 Pipe 的 metadata 信息，如 Pipe 的名称 - 即 name 属性
 实现 PipeTransform 接口中定义的 transform 方法
 - WelcomePipe 定义  
-```js
+```
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'welcome' })
