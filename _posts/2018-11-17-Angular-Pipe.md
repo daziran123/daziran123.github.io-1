@@ -41,7 +41,7 @@ tags:
 </div>
 ```
 
-- 数值格式化
+- 数值格式化  
 ``` html
 <div>
   <p ngNonBindable>{{ 3.14159265 | number: 1.4-4 }}</p>
@@ -49,7 +49,7 @@ tags:
 </div>
 ```
 
-- 日期格式化  
+- 日期格式化    
  
  ``` html
 <div>
@@ -58,13 +58,12 @@ tags:
 </div>  
 ```
 
-- JavaScript 对象序列化
+- JavaScript 对象序列化  
 
 
 
-- 对象转换
+- 对象转换  
 
- 
 ``` html
  <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
 <div *ngFor="let item of object | keyvalue">
@@ -73,11 +72,10 @@ tags:
 ```
 
 
-- 管道参数
+- 管道参数  
 管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，  
 若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
-
-``` html
+``` html  
 <div>
    <p ngNonBindable>{{ lo | repeat:3 }}</p>
    <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
