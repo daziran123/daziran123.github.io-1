@@ -16,6 +16,7 @@ tags:
 
 ### Angular 中 Pipe
 > Angular 中 Pipe（管道） 与 Angular 1.x 中的 filter（过滤器）的作用的是一样的。它们都是用来对输  入的数据进行处理，如大小写转换、数值和日期格式  化等。
+
 ```
 <div>
    <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
@@ -31,63 +32,7 @@ tags:
 </div>
 ```
 - 小写转换
-```
-<div>
-  <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
-  <p>{{ 'Angular' | lowercase }}</p> <!-- Output: angular -->
-</div>
-```
 
-- 数值格式化
-```
-<div>
-  <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
-  <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
-</div>
-
-```
-
-
-
-
-- 日期格式化
- 
-```
-<div>
-  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
-  <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
-</div>
-```
-- JavaScript 对象序列化
-
-- 对象转换
- 
-```
- <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
-<div *ngFor="let item of object | keyvalue">
-   {{item.key}}: {{item.value}} 
-</div>
-
-```
-- 管道参数
-管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
-
-```
-<div>
-  <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
-  <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
-</div>
-
-```
-- 管道链  
-我们可以将多个管道连接在一起，组成管道链对数据进行处理。
-  
-```
-<div>
-  <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-  <p>{{ 'daziran' | slice:0:3 | uppercase }}</p> <!-- Output: SEM -->
-</div>
-```
 - 完整示例  
  
 
