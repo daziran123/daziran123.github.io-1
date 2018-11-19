@@ -40,14 +40,14 @@ tags:
   <p>{{ Angular | lowercase }}</p> <!-- Output: angular -->
 </div>
 ```
-
 - 数值格式化  
-``` html
+``` 
 <div>
   <p ngNonBindable>{{ 3.14159265 | number: 1.4-4 }}</p>
   <p>{{ 3.14159265 | number: 1.4-4}}</p> <!-- Output: 3.1416 -->
 </div>
 ```
+
 - 日期格式化   
  ``` html
 <div>
