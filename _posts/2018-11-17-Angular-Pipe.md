@@ -26,13 +26,13 @@ tags:
 
 
 - 大写转换
+
 ```html
 <div>
   <p ngNonBindable>{{ Angular | uppercase }}</p>
   <p>{{ Angular | uppercase }}</p> <!-- Output: ANGULAR -->
 </div>
 ```
-
 
 ```html
 <div>
