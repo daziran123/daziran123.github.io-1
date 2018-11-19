@@ -31,39 +31,58 @@ tags:
   <p>{{ 'Angular' | uppercase }}</p> <!-- Output: ANGULAR -->
 </div>
 ```
-- 小写转换
 
-- 完整示例  
- 
 
-#### 自定义管道
-- 自定义管道的步骤：
-
-> 使用 @Pipe 装饰器定义 Pipe 的 metadata 信息，如 Pipe 的名称 - 即 name 属性
-实现 PipeTransform 接口中定义的 transform 方法
-- WelcomePipe 定义
-
-``` 
-import { Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({ name: 'welcome' })
-export class WelcomePipe implements PipeTransform {
-  transform(value: string): string {
-    if(!value) return value;
-    if(typeof value !== 'string') {
-      throw new Error('Invalid pipe argument for WelcomePipe');
-    }
-    return "Welcome to " + value;
-  }
-}
-```
-- WelcomePipe 使用
 ```
 <div>
-   <p ngNonBindable>{{ 'daziran' | welcome }}</p>
-   <p>{{ 'daziran' | welcome }}</p> <!-- Output: Welcome to daziran -->
+  <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
+  <p>{{ 'Angular' | lowercase }}</p> <!-- Output: angular -->
 </div>
 ```
+
+- 数值格式化
+```
+<div>
+  <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
+  <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
+</div>
+
+```
+
+
+
+
+- 日期格式化
+ 
+```
+<div>
+  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
+  <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
+</div>
+```
+- JavaScript 对象序列化
+
+- 对象转换
+ 
+```
+ <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
+<div *ngFor="let item of object | keyvalue">
+   {{item.key}}: {{item.value}} 
+</div>
+
+```
+
+- 管道参数
+管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
+
+```
+<div>
+  <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
+  <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
+</div>
+
+```
+
 
 #### 内建管道及分类
 String -> String  
