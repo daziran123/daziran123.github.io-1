@@ -98,7 +98,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `
+  template:
     <div>
       <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
       <p>{{ 'Angular' | uppercase }}</p>  
@@ -127,7 +127,7 @@ import { Component } from '@angular/core';
       <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
       <p>{{ 'daziran' | slice:0:3 | uppercase }}</p>
     </div>
-  `,
+  ,
 })
 export class AppComponent {
   today = new Date();
