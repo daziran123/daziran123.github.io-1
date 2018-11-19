@@ -47,9 +47,6 @@ tags:
 
 ```
 
-```
-
-```
 
 
 
@@ -93,47 +90,7 @@ tags:
 ```
 - 完整示例  
  
-```
-import { Component } from '@angular/core';
 
-@Component({
-  selector: 'my-app',
-  template:
-    <div>
-      <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
-      <p>{{ 'Angular' | uppercase }}</p>  
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
-      <p>{{ 'Angular' | lowercase }}</p>  
-    </div>
-    <div>
-      <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p> 
-      <p>{{ 3.14159265 | number: '1.4-4' }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ today | date: 'shortTime' }}</p>
-      <p>{{ today | date: 'shortTime' }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ { name: 'daziran'  | json }}</p>
-      <p>{{ { name: 'daziran'  | json }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>  
-      <p>{{ 'semlinker' | slice:0:3 }}</p>
-    </div>
-    <div>
-      <p ngNonBindable>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-      <p>{{ 'daziran' | slice:0:3 | uppercase }}</p>
-    </div>
-  ,
-})
-export class AppComponent {
-  today = new Date();
-}
-
-```
 #### 自定义管道
 - 自定义管道的步骤：
 
