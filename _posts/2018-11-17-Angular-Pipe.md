@@ -49,8 +49,16 @@ tags:
 
 ```
 
+- 日期格式化  
 
-
+ 
+```
+<div>
+  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
+  <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
+</div>  
+```
+- JavaScript 对象序列化
 
 
 
