@@ -82,7 +82,6 @@ tags:
   <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
   <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
 </div>
-
 ```
 
 
