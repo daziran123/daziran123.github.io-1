@@ -20,6 +20,9 @@ twitter_username:
 # linkedin_username:  firstname-lastname-idxxxx
 
 
+#encoding
+encoding: UTF-8
+
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
