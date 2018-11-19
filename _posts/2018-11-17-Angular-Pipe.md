@@ -52,36 +52,7 @@ tags:
 
 
 
-- 日期格式化
- 
-```
-<div>
-  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
-  <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
-</div>
-```
-- JavaScript 对象序列化
 
-- 对象转换
- 
-```
- <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
-<div *ngFor="let item of object | keyvalue">
-   {{item.key}}: {{item.value}} 
-</div>
-
-```
-
-- 管道参数
-管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
-
-```
-<div>
-  <p ngNonBindable>{{ 'daziran' | slice:0:3 }}</p>
-  <p>{{ 'daziran' | slice:0:3 }}</p> <!-- Output: sem -->
-</div>
-
-```
 
 
 #### 内建管道及分类
