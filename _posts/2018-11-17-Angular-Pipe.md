@@ -62,6 +62,21 @@ tags:
 
 
 
+- 对象转换
+
+ 
+```
+ <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
+<div *ngFor="let item of object | keyvalue">
+   {{item.key}}: {{item.value}} 
+</div>
+```
+
+
+
+
+
+
 
 #### 内建管道及分类
 String -> String  
