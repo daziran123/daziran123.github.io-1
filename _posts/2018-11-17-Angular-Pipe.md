@@ -48,10 +48,9 @@ tags:
   <p>{{ 3.14159265 | number: 1.4-4}}</p> <!-- Output: 3.1416 -->
 </div>
 ```
-
-- 日期格式化    
+- 日期格式化   
  
- ``` html
+``` html
 <div>
   <p ngNonBindable>{{ today | date:shortTime }}</p>
   <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
@@ -68,14 +67,14 @@ tags:
  <!-- object: {[key: number]: string} = {2: 'foo', 1: 'bar'}; -->
 <div *ngFor="let item of object | keyvalue">
    {{item.key}}: {{item.value}} 
-</div>
+</div>  
 ```
 
 
 - 管道参数  
 管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，  
 若需要传递多个参数则参数之间用冒号隔开，具体示例如下：
-``` html  
+``` html    
 <div>
    <p ngNonBindable>{{ lo | repeat:3 }}</p>
    <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
