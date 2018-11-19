@@ -19,8 +19,8 @@ tags:
 
 ```html
 <div>
-   <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
-   <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
+   <p ngNonBindable>{{ lo | repeat:3 }}</p>
+   <p>{{ lo | repeat:3 }}</p> <!-- Output: lololo -->
 </div>
 ```
 
@@ -28,24 +28,24 @@ tags:
 - 大写转换
 ```html
 <div>
-  <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
-  <p>{{ 'Angular' | uppercase }}</p> <!-- Output: ANGULAR -->
+  <p ngNonBindable>{{ Angular | uppercase }}</p>
+  <p>{{ Angular | uppercase }}</p> <!-- Output: ANGULAR -->
 </div>
 ```
 
 
 ```html
 <div>
-  <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
-  <p>{{ 'Angular' | lowercase }}</p> <!-- Output: angular -->
+  <p ngNonBindable>{{ Angular | lowercase }}</p>
+  <p>{{ Angular | lowercase }}</p> <!-- Output: angular -->
 </div>
 ```
 
 - 数值格式化
 ```html
 <div>
-  <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
-  <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
+  <p ngNonBindable>{{ 3.14159265 | number: 1.4-4 }}</p>
+  <p>{{ 3.14159265 | number: 1.4-4}}</p> <!-- Output: 3.1416 -->
 </div>
 ```
 
@@ -53,7 +53,7 @@ tags:
  
  ```html
 <div>
-  <p ngNonBindable>{{ today | date:'shortTime' }}</p>
+  <p ngNonBindable>{{ today | date:shortTime }}</p>
   <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
 </div>  
 ```
@@ -79,7 +79,7 @@ tags:
 
 ```html
 <div>
-   <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
+   <p ngNonBindable>{{ lo | repeat:3 }}</p>
    <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
 </div>
 ```
