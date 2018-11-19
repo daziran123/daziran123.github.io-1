@@ -26,7 +26,7 @@ tags:
 
 
 - 大写转换
-```
+```html
 <div>
   <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
   <p>{{ 'Angular' | uppercase }}</p> <!-- Output: ANGULAR -->
@@ -42,7 +42,7 @@ tags:
 ```
 
 - 数值格式化
-```
+```html
 <div>
   <p ngNonBindable>{{ 3.14159265 | number: '1.4-4' }}</p>
   <p>{{ 3.14159265 | number: '1.4-4' }}</p> <!-- Output: 3.1416 -->
@@ -50,14 +50,14 @@ tags:
 ```
 
 - 日期格式化  
-
  
-```html
+ ```html
 <div>
   <p ngNonBindable>{{ today | date:'shortTime' }}</p>
   <p>{{ today | date: 'shortTime' }}</p> <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
 </div>  
 ```
+
 - JavaScript 对象序列化
 
 
