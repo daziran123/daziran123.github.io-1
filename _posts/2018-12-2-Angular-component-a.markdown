@@ -12,6 +12,7 @@ tags:
     - Angular
     - router
 ---
+
 ### Angular静态同步路由和异步路由
 
 - NgModule 为什么需要NgModule
@@ -29,6 +30,7 @@ const homeRouter =[
 ];  
 export default RouterModule.forChild(homeRoutes)  
 ```
+### 异步路由
 ```TS
 import {RouterModule} from '@angular/router'
 const Routers=[
