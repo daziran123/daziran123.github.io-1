@@ -18,7 +18,7 @@ tags:
 - NgModule 为什么需要NgModule
 - 默认加到模块这一层 
 - 每次路径需要规划好,在哪个业务模块下做几层路由，几级结构，参数是什么样的。 
-![route](../img/router-tree.jpg)  
+![route](./img/router-tree.jpg)  
 - 静态路由
 - 异步路由
 
